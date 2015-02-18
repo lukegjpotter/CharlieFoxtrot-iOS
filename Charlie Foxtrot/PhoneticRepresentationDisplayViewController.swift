@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PhoneticRepresentationDisplayViewController.swift
 //  Charlie Foxtrot
 //
 //  Created by Luke Potter on 18/02/2015.
@@ -8,18 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class PhoneticRepresentationDisplayViewController: UIViewController {
+    
+    //@IBOutlet weak var PhoneticRepresentationOfTextFromSegue: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
-

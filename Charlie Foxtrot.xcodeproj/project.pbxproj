@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		351641751A951D9E000C35F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351641741A951D9E000C35F7 /* AppDelegate.swift */; };
-		351641771A951D9E000C35F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351641761A951D9E000C35F7 /* ViewController.swift */; };
 		3516417A1A951D9E000C35F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 351641781A951D9E000C35F7 /* Main.storyboard */; };
 		3516417C1A951D9E000C35F7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3516417B1A951D9E000C35F7 /* Images.xcassets */; };
 		3516417F1A951D9E000C35F7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3516417D1A951D9E000C35F7 /* LaunchScreen.xib */; };
 		3516418B1A951D9E000C35F7 /* Charlie_FoxtrotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3516418A1A951D9E000C35F7 /* Charlie_FoxtrotTests.swift */; };
+		351641951A952398000C35F7 /* PhoneticRepresentationDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351641941A952398000C35F7 /* PhoneticRepresentationDisplayViewController.swift */; };
+		351641971A952EF1000C35F7 /* GatherDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351641961A952EF1000C35F7 /* GatherDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +30,14 @@
 		3516416F1A951D9E000C35F7 /* Charlie Foxtrot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Charlie Foxtrot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		351641731A951D9E000C35F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		351641741A951D9E000C35F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		351641761A951D9E000C35F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		351641791A951D9E000C35F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3516417B1A951D9E000C35F7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3516417E1A951D9E000C35F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		351641841A951D9E000C35F7 /* Charlie FoxtrotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Charlie FoxtrotTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		351641891A951D9E000C35F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3516418A1A951D9E000C35F7 /* Charlie_FoxtrotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charlie_FoxtrotTests.swift; sourceTree = "<group>"; };
+		351641941A952398000C35F7 /* PhoneticRepresentationDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneticRepresentationDisplayViewController.swift; sourceTree = "<group>"; };
+		351641961A952EF1000C35F7 /* GatherDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GatherDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				351641741A951D9E000C35F7 /* AppDelegate.swift */,
-				351641761A951D9E000C35F7 /* ViewController.swift */,
+				351641961A952EF1000C35F7 /* GatherDetailsViewController.swift */,
+				351641941A952398000C35F7 /* PhoneticRepresentationDisplayViewController.swift */,
 				351641781A951D9E000C35F7 /* Main.storyboard */,
 				3516417B1A951D9E000C35F7 /* Images.xcassets */,
 				3516417D1A951D9E000C35F7 /* LaunchScreen.xib */,
@@ -212,7 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				351641771A951D9E000C35F7 /* ViewController.swift in Sources */,
+				351641951A952398000C35F7 /* PhoneticRepresentationDisplayViewController.swift in Sources */,
+				351641971A952EF1000C35F7 /* GatherDetailsViewController.swift in Sources */,
 				351641751A951D9E000C35F7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +409,7 @@
 				351641901A951D9E000C35F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		351641911A951D9E000C35F7 /* Build configuration list for PBXNativeTarget "Charlie FoxtrotTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +418,7 @@
 				351641931A951D9E000C35F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
