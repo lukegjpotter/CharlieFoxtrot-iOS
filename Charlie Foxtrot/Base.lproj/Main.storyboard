@@ -26,7 +26,7 @@
                                     <segue destination="KwC-F3-tpE" kind="show" identifier="segueToResult" id="ALe-cL-PSD"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="text to convert" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o2a-yd-eu4">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text to Convert" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o2a-yd-eu4">
                                 <rect key="frame" x="16" y="230" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -42,7 +42,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Charlie Foxtrot" id="Kgn-vE-gyV"/>
                     <connections>
-                        <outlet property="ConversionOutcome" destination="3wQ-qP-qQO" id="3NL-Ef-1HQ"/>
                         <outlet property="TextToConvert" destination="o2a-yd-eu4" id="CKe-Pi-Bdx"/>
                     </connections>
                 </viewController>
@@ -62,22 +61,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wQ-qP-qQO">
-                                <rect key="frame" x="16" y="72" width="568" height="508"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Conversion Result" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wQ-qP-qQO">
+                                <rect key="frame" x="16" y="72" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6AG-Ub-tT9">
+                                <rect key="frame" x="16" y="110" width="568" height="470"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" staticText="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="3wQ-qP-qQO" firstAttribute="trailing" secondItem="Ppl-8F-mia" secondAttribute="trailingMargin" id="0OC-DM-47K"/>
-                            <constraint firstItem="ICZ-wf-JLA" firstAttribute="top" secondItem="3wQ-qP-qQO" secondAttribute="bottom" constant="20" id="6VI-DC-sGV"/>
+                            <constraint firstItem="3wQ-qP-qQO" firstAttribute="leading" secondItem="6AG-Ub-tT9" secondAttribute="trailing" constant="-568" id="Ed9-lo-pxk"/>
                             <constraint firstItem="3wQ-qP-qQO" firstAttribute="leading" secondItem="Ppl-8F-mia" secondAttribute="leadingMargin" id="S88-Dr-bPX"/>
+                            <constraint firstItem="6AG-Ub-tT9" firstAttribute="leading" secondItem="Ppl-8F-mia" secondAttribute="leadingMargin" id="hCM-4y-xKe"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="convertedText" destination="3wQ-qP-qQO" id="Qft-PV-hPx"/>
+                        <outlet property="convertedTextView" destination="6AG-Ub-tT9" id="Zxn-q7-UUM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grP-7b-CYB" userLabel="First Responder" sceneMemberID="firstResponder"/>

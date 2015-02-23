@@ -11,7 +11,8 @@ import UIKit
 class PhoneticRepresentationDisplayViewController: UIViewController {
     
     var convertText = ""
-    @IBOutlet weak var convertedText: UILabel!
+    
+    @IBOutlet weak var convertedTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +22,8 @@ class PhoneticRepresentationDisplayViewController: UIViewController {
     }
     
     func setConvertedTextUILabel() {
-        // Determine the required size of the UILabel.
-        convertedText.numberOfLines = countElements(convertText)
-        
-        // Set the text of the UILabel to the outcome of the conversion.
+        // Set the text of the UITextView to the outcome of the conversion.
         var converterService = ConverterService()
-        self.convertedText.text = converterService.convert(convertText)
+        self.convertedTextView.text = converterService.convert(convertText)
     }
 }
