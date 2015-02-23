@@ -13,21 +13,16 @@ import UIKit
 class GatherDetailsViewController: UIViewController {
     
     @IBOutlet weak var textToConvert: UITextField!
-    @IBOutlet weak var conversionOutcome: UILabel!
     
-    @IBAction func Convert(sender: UIButton) {
-        // Make the onscreen keyboard dissappear.
-        self.textToConvert.resignFirstResponder()
-        
-        // Get the text from the UITextField.
-        var textFromUITextField = textToConvert.text
-        
-        // Determine the required size of the UILabel.
-        conversionOutcome.numberOfLines = countElements(textFromUITextField)
-        
-        // Set the text of the UILabel to the outcome of the conversion.
-        var converterService = ConverterService()
-        self.conversionOutcome.text = converterService.convert(textFromUITextField)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "segueToResult") {
+            // Make the onscreen keyboard dissappear.
+            self.textToConvert.resignFirstResponder()
+            
+            // Perform the Segue.
+            var segueToResult = segue.destinationViewController as PhoneticRepresentationDisplayViewController
+            segueToResult.convertText = textToConvert.text
+        }
     }
 
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
