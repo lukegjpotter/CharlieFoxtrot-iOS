@@ -5,112 +5,33 @@
 //  Created by Luke Potter on 18/02/2015.
 //  Copyright (c) 2015 Luke GJ Potter. All rights reserved.
 //
+// This is the View Controller tht gathers String to be converted from the UI.
+// It then passes these details to the View that presents the Phonetic Representation of the string.
 
 import UIKit
 
 class GatherDetailsViewController: UIViewController {
     
-    @IBOutlet weak var TextToConvert: UITextField!
-    @IBOutlet weak var ConversionOutcome: UILabel!
+    @IBOutlet weak var textToConvert: UITextField!
+    @IBOutlet weak var conversionOutcome: UILabel!
     
     @IBAction func Convert(sender: UIButton) {
-        self.TextToConvert.resignFirstResponder()
+        // Make the onscreen keyboard dissappear.
+        self.textToConvert.resignFirstResponder()
         
-        self.ConversionOutcome.text = Convert(TextToConvert.text)
-    }
-    
-    func Convert(ConvertText: String) -> String {
+        // Get the text from the UITextField.
+        var textFromUITextField = textToConvert.text
         
-        var PhoneticRepresentation = ""
-        ConversionOutcome.numberOfLines = countElements(ConvertText)
+        // Determine the required size of the UILabel.
+        conversionOutcome.numberOfLines = countElements(textFromUITextField)
         
-        for character in ConvertText.lowercaseString {
-            
-            switch character {
-                
-            case "a":
-                PhoneticRepresentation += "Alpha"
-            case "b":
-                PhoneticRepresentation += "Bravo"
-            case "c":
-                PhoneticRepresentation += "Charlie"
-            case "d":
-                PhoneticRepresentation += "Delta"
-            case "e":
-                PhoneticRepresentation += "Echo"
-            case "f":
-                PhoneticRepresentation += "Foxtrot"
-            case "g":
-                PhoneticRepresentation += "Golf"
-            case "h":
-                PhoneticRepresentation += "Hotel"
-            case "i":
-                PhoneticRepresentation += "India"
-            case "j":
-                PhoneticRepresentation += "Juliett"
-            case "k":
-                PhoneticRepresentation += "Kilo"
-            case "l":
-                PhoneticRepresentation += "Lima"
-            case "m":
-                PhoneticRepresentation += "Mike"
-            case "n":
-                PhoneticRepresentation += "November"
-            case "o":
-                PhoneticRepresentation += "Oscar"
-            case "p":
-                PhoneticRepresentation += "Papa"
-            case "q":
-                PhoneticRepresentation += "Quebec"
-            case "r":
-                PhoneticRepresentation += "Romeo"
-            case "s":
-                PhoneticRepresentation += "Sierra"
-            case "t":
-                PhoneticRepresentation += "Tango"
-            case "u":
-                PhoneticRepresentation += "Uniform"
-            case "v":
-                PhoneticRepresentation += "Victor"
-            case "w":
-                PhoneticRepresentation += "Whiskey"
-            case "x":
-                PhoneticRepresentation += "Xray"
-            case "y":
-                PhoneticRepresentation += "Yankee"
-            case "z":
-                PhoneticRepresentation += "Zulu"
-            case "0":
-                PhoneticRepresentation += "Zero"
-            case "1":
-                PhoneticRepresentation += "One"
-            case "2":
-                PhoneticRepresentation += "Two"
-            case "3":
-                PhoneticRepresentation += "Three"
-            case "4":
-                PhoneticRepresentation += "Four"
-            case "5":
-                PhoneticRepresentation += "Five"
-            case "6":
-                PhoneticRepresentation += "Six"
-            case "7":
-                PhoneticRepresentation += "Seven"
-            case "8":
-                PhoneticRepresentation += "Eight"
-            case "9":
-                PhoneticRepresentation += "Niner"
-            default:
-                PhoneticRepresentation += ""
-            }
-            
-            PhoneticRepresentation += "\n"
-        }
-        
-        return PhoneticRepresentation
+        // Set the text of the UILabel to the outcome of the conversion.
+        var converterService = ConverterService()
+        self.conversionOutcome.text = converterService.convert(textFromUITextField)
     }
 
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        // Make the onscreen keyboard dissappear.
         self.view.endEditing(true)
     }
     

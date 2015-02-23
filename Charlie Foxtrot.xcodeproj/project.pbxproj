@@ -14,6 +14,7 @@
 		3516418B1A951D9E000C35F7 /* Charlie_FoxtrotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3516418A1A951D9E000C35F7 /* Charlie_FoxtrotTests.swift */; };
 		351641951A952398000C35F7 /* PhoneticRepresentationDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351641941A952398000C35F7 /* PhoneticRepresentationDisplayViewController.swift */; };
 		351641971A952EF1000C35F7 /* GatherDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351641961A952EF1000C35F7 /* GatherDetailsViewController.swift */; };
+		3592D2771A9A8E490044C723 /* ConverterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3592D2761A9A8E490044C723 /* ConverterService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		3516418A1A951D9E000C35F7 /* Charlie_FoxtrotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charlie_FoxtrotTests.swift; sourceTree = "<group>"; };
 		351641941A952398000C35F7 /* PhoneticRepresentationDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneticRepresentationDisplayViewController.swift; sourceTree = "<group>"; };
 		351641961A952EF1000C35F7 /* GatherDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GatherDetailsViewController.swift; sourceTree = "<group>"; };
+		3592D2761A9A8E490044C723 /* ConverterService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				351641741A951D9E000C35F7 /* AppDelegate.swift */,
 				351641961A952EF1000C35F7 /* GatherDetailsViewController.swift */,
 				351641941A952398000C35F7 /* PhoneticRepresentationDisplayViewController.swift */,
+				3592D2761A9A8E490044C723 /* ConverterService.swift */,
 				351641781A951D9E000C35F7 /* Main.storyboard */,
 				3516417B1A951D9E000C35F7 /* Images.xcassets */,
 				3516417D1A951D9E000C35F7 /* LaunchScreen.xib */,
@@ -218,6 +221,7 @@
 				351641951A952398000C35F7 /* PhoneticRepresentationDisplayViewController.swift in Sources */,
 				351641971A952EF1000C35F7 /* GatherDetailsViewController.swift in Sources */,
 				351641751A951D9E000C35F7 /* AppDelegate.swift in Sources */,
+				3592D2771A9A8E490044C723 /* ConverterService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
