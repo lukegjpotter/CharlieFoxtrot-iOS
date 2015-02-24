@@ -7,7 +7,8 @@ The [Android Version of Charlie Foxtrot](https://play.google.com/store/apps/deta
 
  1. Add a Conversion History
 
-# Done
+# Completed in Version 1.0:
+
  1. Add a second page and Navigation to display results.
  2. Make it look good on the various UIs
  3. Implement MVC pattern for the app.
