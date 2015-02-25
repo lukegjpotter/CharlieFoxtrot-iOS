@@ -5,7 +5,9 @@ The [Android Version of Charlie Foxtrot](https://play.google.com/store/apps/deta
 
 # To Do
 
- 1. Add a Conversion History
+ 1. Add a Conversion History.
+ 2. Add colour to the Navigation Bar.
+ 3. Add a title to the Conversion Result screen.
 
 # Completed in Version 1.0:
 
